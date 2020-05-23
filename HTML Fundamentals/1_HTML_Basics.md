@@ -41,7 +41,11 @@ The `<head>` tag also has a closing tag as `</head>` and anything contained with
 
 However, it contains some very important information for the browser.
 
+> More information on `<head>` tag is here :
+
 
 ### `<body>` Tag
 
-The
+The `<body>` tag also has a closing tag as `</body>` and anything contained within these two tags is displayed visually within the content area of the web browser.
+
+> More information on `<body>` tag is here :
