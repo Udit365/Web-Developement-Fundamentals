@@ -1,15 +1,22 @@
 # The `<body>` Tag
 
-The `<body>` tags contains all sorts of visible texts, images, hyperlinks, tables, lists etc. within it.
+The `<body>` tags contains all sorts of visible texts, lists, images, links, tables etc. within it.
 
 Separate tags and syntax exists to add all these visible elements inside the `<body>` tags.
 
-Some of such tags are :
+Some of the basic operations performed within the `<body>` tags are :
 
-1. Sentence formatting tags
-2. Text formatting tags
+1. Sentence formatting
+2. Text formatting
+3. Adding Lists
+4. Adding & formatting Images
+5. Adding & formatting Videos
+6. Adding & formatting Links
+7. Adding & formatting tables
 
+## Sentence Formatting
 
+Sentence formatting includes
 
 ## The `<p>` Tags
 
@@ -280,3 +287,233 @@ We can add links to the images as well, as follows :
 </a>
 ```
 Through Image links, the user can navigate to the provided link by clicking on the image.
+
+## Adding Tables
+
+The `<table>` tags are used to add tables in the web page.
+
+We can add a table in the web page by following the syntactical approach given in the below example :
+
+```HTML
+<table width="50%" border="1" bordercolor="blue" cellspacing="2" cellpadding = "2">
+  <tr>
+    <td> Sports </td>
+    <td> Responses </td>
+  </tr>
+  <tr>
+    <td> Basketball </td>
+    <td> 25 </td>
+  </tr>
+  <tr>
+    <td> Baseball </td>
+    <td> 28 </td>
+  </tr>
+</table>
+```
+
+- `<tr>` tags add a row to the table
+- `<td>` tags add column to the table
+
+The opening `<table>` tag also takes several attributes to format the table as well and they are as follows :
+
+- `width = 50%` : Table covers 50% of browser width, to have a fixed table width irrespective of any browser width, we can specify the pixels instead of percentages. For example : `width = "500"`
+
+- `border="1"` : Sets the border thickness, to have a table without any borders, we can set `border = "0"`.
+
+- `bordercolor="blue"` : Sets the color of the table border to "Blue".
+
+- `cellspacing="2"` : Sets the space between two consecutive cells to "2" pixels
+
+- `cellpadding = "2"` : Pads the number 2 pixels away from each side of its cell.
+
+The below image illustrates the cell-spacing and cell-padding in a table :
+
+<img src = "../Images/cell_spacing_and_padding.jpg">
+
+### Nested Tables :
+
+We can also create nested tables by adding the child-tables into the cells of parent table.
+
+The width of the child table will always remain relative to its parent table only.
+
+If the fixed width assigned to the child-table is greater than the fixed with assigned to the parent table then, the parent-table width becomes equal to the child-table width.
+
+So, we can say, in no way, the child-table overflows out of the parent table.
+
+The following example creates two side by side child tables :
+
+```HTML
+<table width="50%" border="1" bordercolor="red" cellspacing="2" cellpadding = "2">
+  <tr>
+
+    <td>
+      <table width="100%" border="1" bordercolor="blue" cellspacing="2" cellpadding = "2">
+        <tr>
+          <td> Sports </td>
+          <td> Responses </td>
+        </tr>
+        <tr>
+          <td> Basketball </td>
+          <td> 25 </td>
+        </tr>
+        <tr>
+          <td> Baseball </td>
+          <td> 28 </td>
+        </tr>
+      </table>
+    </td>
+
+    <td>
+    <table width="100%" border="1" bordercolor="blue" cellspacing="2" cellpadding = "2">
+      <tr>
+        <td> Sports </td>
+        <td> Responses </td>
+      </tr>
+      <tr>
+        <td> Football </td>
+        <td> 40 </td>
+      </tr>
+      <tr>
+        <td> Cricket </td>
+        <td> 45 </td>
+      </tr>
+    </table>
+  </td>
+
+  </tr>
+</table>
+```
+
+### Merging Cells
+
+We can merge the cells of a table by adding an attribute, `colspan = "no. of rows/columns to merge"` to the `<td>` tabs (for merging by columns) or, `<tr>`tabs (for merging by rows).
+
+The following example, merges two side by side column headers of a `(3 x 2)` table :
+
+```HTML
+<table width="50%" border="1" bordercolor="black" cellspacing="2" cellpadding="2">
+  <tr>
+    <td colspan="2"> My Expenses </td>
+  </tr>
+  <tr>
+    <td> January </td>
+    <td> $500 </td>
+  </tr>
+  <tr>
+    <td> February </td>
+    <td> $200 </td>
+  </tr>
+  <tr>
+    <td> March </td>
+    <td> $300 </td>
+  </tr>
+  <tr>
+    <td> Total </td>
+    <td> $1000 </td>
+  </tr>
+</table>
+```
+### Text Wrapping in Cells
+
+By default, the HTML tables wraps up the cell content if it is long enough to be accommodated within the specified cell width but; if we don't want to wrap our texts then, we can add an additional attribute, `nowrap` to do so.
+
+In the following example, `nowrap` is applied to the column header :
+
+```HTML
+<table width="200" border="1" bordercolor="black" cellspacing="2" cellpadding="2">
+  <tr>
+    <td colspan="2" nowrap> My expenses in the 1st two motnths of Q1-2020 is as follows : </td>
+  </tr>
+  <tr>
+    <td> January </td>
+    <td> $500 </td>
+  </tr>
+  <tr>
+    <td> February </td>
+    <td> $200 </td>
+  </tr>
+</table>
+```
+
+> ***Note :*** `nowrap` attribute overwrites the specified table width.
+
+### Text Alignments in Cells
+
+The cell contents can be aligned to left, right, centre or, justify by using the following attributes :
+
+- `align = "right"`- For right alignment
+- `align = "left"` - For left alignment
+- `align = "center"` - For centre alignment
+
+In the following example, the column headers and "Expenses" column ins centre aligned whereas, the "Month" column is left aligned :
+
+```HTML
+<table width="30%" border="1" bordercolor="black" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center"> Month </td>
+    <td align="center"> Expenses </td>
+  </tr>
+  <tr>
+    <td align="left"> January </td>
+    <td align="center"> $500 </td>
+  </tr>
+  <tr>
+    <td align="left"> February </td>
+    <td align="center"> $200 </td>
+  </tr>
+  <tr>
+    <td align="left"> March </td>
+    <td align="center"> $300 </td>
+  </tr>
+</table>
+```
+
+## Table Background
+
+With the help of `background` attribute, we can set any colour or, image as the background of the whole table or, for some specific column/row/cell as well.
+
+The following example shows, how to add a specific colour as the table background :
+
+```HTML
+<table width="30%" border="1" background="Image URL">
+  <tr>
+    <td align="center"> Month </td>
+    <td align="center"> Expenses </td>
+  </tr>
+  <tr>
+    <td align="left"> January </td>
+    <td align="center"> $500 </td>
+  </tr>
+  <tr>
+    <td align="left"> February </td>
+    <td align="center"> $200 </td>
+  </tr>
+  <tr>
+    <td align="left"> March </td>
+    <td align="center"> $300 </td>
+  </tr>
+</table>
+```
+
+similarly, we can apply the background image just to the column headers as follows :
+
+```HTML
+<table width="30%" border="1">
+  <tr background="Image URL">
+    <td align="center"> Month </td>
+    <td align="center"> Expenses </td>
+  </tr>
+  <tr>
+    <td align="left"> January </td>
+    <td align="center"> $500 </td>
+  </tr>
+  <tr>
+    <td align="left"> February </td>
+    <td align="center"> $200 </td>
+  </tr>
+  <tr>
+    <td align="left"> March </td>
+    <td align="center"> $300 </td>
+  </tr>
+</table>
+```
