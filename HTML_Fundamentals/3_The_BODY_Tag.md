@@ -11,18 +11,23 @@ Some of the basic operations performed within the `<body>` tags are :
 3. Adding Lists
 4. Adding & formatting Images
 5. Adding & formatting Videos
-6. Adding & formatting Links
-7. Adding & formatting tables
+6. Adding & formatting Links (Relative/Absolute)
+7. Adding Anchor tags
+8. Adding & formatting Tables
 
 ## Sentence Formatting
 
-Sentence formatting includes
+Sentence formatting includes :
 
-## The `<p>` Tags
+- Adding Paragraphs (With `<p>` tags)
+- Adding Line breaks (With `<br>` tag)
+- Adding blank spaces (With `&nbsp;` tag)
+
+### The `<p>` Tags
 
 The `<p>` tags creates the paragraph spacing between the lines of text.
 
-*For example :*
+_For example :_
 
 ```HTML
 <p>
@@ -34,13 +39,13 @@ The `<p>` tags creates the paragraph spacing between the lines of text.
 </p>
 ```
 
-## The `<br>` Tag
+### The `<br>` Tag
 
 The `<br>` tag don't have a closing tag and it simply breaks the line to start the next sentence on the next line.
 
 Unlike the `<p>` tags, it don't creates a large spacing but, just creates a new line for the sentence.
 
-*For example :*
+_For example :_
 
 ```HTML
 It was another day in the city and the hunter is still clueless.<br>
@@ -48,30 +53,35 @@ The door bell rang and someone outside started speaking in a gentle voice.<br>
 The hunter was afraid and asked "Who are you ?"
 ```
 
-## The `&nbsp;` Tag
+### The `&nbsp;` Tag
 
-HTML ignores the blank spaces between sentences and this is popularly known as the "*white space collapsing*" property.
+HTML ignores the blank spaces between sentences and this is popularly known as the "_white space collapsing_" property.
 
-So, spaces created by the *Tab Key, Enter Key* or, *Space bar* is basically ignored by HTML.
+So, spaces created by the _Tab Key, Enter Key_ or, _Space bar_ is basically ignored by HTML.
 
 Therefore, to add empty spaces between sentences, we can use the keyword `&nbsp;` between two sentences.
 
-`&nbsp;` stands for "*Non-Breaking Spaces*" and one such tag creates a single space (equivalent of tapping the *space bar* once).
+`&nbsp;` stands for "_Non-Breaking Spaces_" and one such tag creates a single space (equivalent of tapping the _space bar_ once).
 
-If we want to have blank spaces equivalent of pressing the *Tab key* once then, we have to write `&nbsp;` for four times.
+If we want to have blank spaces equivalent of pressing the _Tab key_ once then, we have to write `&nbsp;` for four times.
 
-*For Example :*
+_For Example :_
 
 ```HTML
 This marks the end of hunter's life. Hunter died as he can't cooperate with the city lifestyle but,what message he gave us is worth remembering.
 &nbsp; &nbsp; &nbsp; &nbsp;  It was a new morning and the hunter found himself in his cottage but, now it looks a little different. There were flowers everywhere and birds were chippering outside.
 ```
 
+## Text Formatting
 
+The text formatting includes :
 
-## Text Formatting Tags
-
-### Text Formatting With Tags
+- Adding Headlines (With `<h1>,<h2>,..,<h6>` tags)
+- Making the fonts bold (With `<strong>` tags)
+- Making the fonts italic (With `<em>` tags)
+- Making the fonts underlined (With `<u>` tags)
+- Making the fonts strike-through (With `<strike>` tags)
+- Adding in-line text formatting (With `<font>` tags)
 
 ### Header Tags
 
@@ -81,14 +91,15 @@ Each header tag has its corresponding ending tag and texts enclosed between thes
 
 The six different header tags are as follows (in descending order of header size) :
 
-`<h1> </h1>` :  Largest size
+`<h1> </h1>` : Largest size
 `<h2> </h2>` : Smaller size than `<h1>` tags
 `<h3> </h3>` : Smaller size than `<h2>` tags
 `<h4> </h4>` : Smaller size than `<h3>` tags
 `<h5> </h5>` : Smaller size than `<h4>` tags
 `<h6> </h6>` : Smallest size
 
-*For Example :*
+_For Example :_
+
 ```HTML
 
 <h1> Header 1 </h1>
@@ -99,40 +110,41 @@ The six different header tags are as follows (in descending order of header size
 <h6> Header 1 </h6>
 ```
 
-#### The `<strong>` Tags
+### The `<strong>` Tags
 
 To make a text bold, we need to enclose that within the `<strong>` tags as follows :
 
-*For Example :*
+_For Example :_
 
 ```HTML
 The key character of the story is <strong> hunter </strong>.
 ```
 
-#### The `<em>` Tags
+### The `<em>` Tags
 
 To make a text italics, we need to enclose that within the `<em>` tags as follows :
 
-*For Example :*
+_For Example :_
 
 ```HTML
 Let's make this word <em> italics </em>.
 ```
-#### The `<u>` Tags
+
+### The `<u>` Tags
 
 To underline a text, we need to enclose it within the `<u>` tags as follows :
 
-*For Example :*
+_For Example :_
 
 ```HTML
 This is something very <u> important </u>
 ```
 
-#### The `<strike>` Tags
+### The `<strike>` Tags
 
 To strikethrough a text, we need to enclose it within the `<strike>` tags as follows :
 
-*For Example :*
+_For Example :_
 
 ```HTML
 This task is completed so need to <strike> strikethrough </strike> this.
@@ -140,23 +152,24 @@ This task is completed so need to <strike> strikethrough </strike> this.
 
 To Make a word bold, underlined and italics at the same time, we can enclose it within the respective three tags irrespective of any order but, the respective closing tags must follow the order of the opening tags.
 
-*For Example :*
+_For Example :_
 
 ```HTML
 
 Let's make this <em><strong><u> bold, italics & underlined  </em></strong></u>
 ```
+
 ### Inline Text Formatting with `<font>` tags
 
 A much flexible way of text formatting is inline text formatting.
 
-*For Example :*
+_For Example :_
 
 with the following HTML syntax, we have made :
+
 - Font type : Arial
 - Font size : 24
 - Font colour : Blue
-
 
 ```HTML
 <font face = "arial"  size = "22" color = "blue"> This is the text </font>
@@ -173,7 +186,7 @@ List can be of two types, such as :
 
 The items in an unordered lists are in no particular order. To create an unordered list in HTML, we have to follow the syntactical rule of the following example.
 
-*For Example :*
+_For Example :_
 
 To create an unordered list of top BI tools :
 
@@ -187,13 +200,14 @@ To create an unordered list of top BI tools :
 
 </ul>
 ```
+
 ### Ordered List
 
 The items in an ordered lists are in a particular order and they are identifiable by a sequential order of numbers. To create an ordered list in HTML, we have to follow the syntactical rule of the following example.
 
-*For Example :*
+_For Example :_
 
-Listing out favourite subjects in descending order  :
+Listing out favourite subjects in descending order :
 
 ```HTML
 <ol>
@@ -206,6 +220,7 @@ Listing out favourite subjects in descending order  :
 
 </ol>
 ```
+
 ## Adding Images
 
 The `<img>` tag is used to add images in the web page. We need to follow the below syntactical rule to add an image :
@@ -219,8 +234,8 @@ The `src` tag takes up the image address for rendering. Similarly, we can contro
 ```HTML
 <img src= "Relative/Absolute image address" width="500" height="500">
 ```
-> If we don't provide the `height` tag then, the image will be auto-adjusted according to the width.
 
+> If we don't provide the `height` tag then, the image will be auto-adjusted according to the width.
 
 ## Embedding Videos
 
@@ -239,9 +254,9 @@ By setting `width = "100%"`, we made the video element to cover the entire scree
 
 We can also specify the `width` in pixels, such as, `width = "500"` and in this case, the video element will have a constant width irrespective of the browser screen width.
 
-The `controls` element adds the "*Play*" and "*Progress bar*" to the video and we can remove it if we need.
+The `controls` element adds the "_Play_" and "_Progress bar_" to the video and we can remove it if we need.
 
-But, after removing the `controls` element,  we need to add another element, i.e., `autoplay` otherwise, the video will not play.
+But, after removing the `controls` element, we need to add another element, i.e., `autoplay` otherwise, the video will not play.
 
 > Note : `autoplay` doesn't support in most of the mobile devices like iPhone and iTab etc.
 
@@ -260,7 +275,7 @@ Links can be of two types :
 
 To add textual links in the web page, we can follow the syntactical rule given in this example :
 
-*For Example :*
+_For Example :_
 
 Adding a link for the Wikipedia page :
 
@@ -276,7 +291,6 @@ To open the link in a new tab (or, a new browser window), we need to add `target
 <a href= "https://www.wikipedia.org/" target="_blank"> Wikipedia Page </a>
 ```
 
-
 ### Image Links :
 
 We can add links to the images as well, as follows :
@@ -286,7 +300,36 @@ We can add links to the images as well, as follows :
   <img src="https://tiny.cc/public/images/robot_small.png" width="150">
 </a>
 ```
+
 Through Image links, the user can navigate to the provided link by clicking on the image.
+
+## Anchor Tags
+
+Unlike the links; the anchor tags allow us to navigate to a specific portion of the content on the existing page.
+
+**_For Example:_**<br>
+
+In the following picture, we have the "_Article No._" as the bullet points by clicking which we can navigate to that specific article on the webpage.
+
+<img src="../Images/article_tag.jpg" width=500>
+
+To set-up such navigation, we have to use the `<a>` tags as follows on the "_Article Header_" :
+
+```html
+<h1>
+  <a id="article1"> Article-1 </a>
+</h1>
+```
+
+Similarly, we have to set-up the clickable link to the specific article on the bullet point names as follows :
+
+```html
+<li>
+  <a href="#article1"> Article 1 </a>
+</li>
+```
+
+The `#` symbol is used to tell the browser to search for `article1` in the same webpage.
 
 ## Adding Tables
 
@@ -413,6 +456,7 @@ The following example, merges two side by side column headers of a `(3 x 2)` tab
   </tr>
 </table>
 ```
+
 ### Text Wrapping in Cells
 
 By default, the HTML tables wraps up the cell content if it is long enough to be accommodated within the specified cell width but; if we don't want to wrap our texts then, we can add an additional attribute, `nowrap` to do so.
@@ -435,7 +479,7 @@ In the following example, `nowrap` is applied to the column header :
 </table>
 ```
 
-> ***Note :*** `nowrap` attribute overwrites the specified table width.
+> **_Note :_** `nowrap` attribute overwrites the specified table width.
 
 ### Text Alignments in Cells
 
@@ -470,9 +514,9 @@ In the following example, the column headers and "Expenses" column ins centre al
 
 ## Table Background
 
-With the help of `background` attribute, we can set any colour or, image as the background of the whole table or, for some specific column/row/cell as well.
+With the help of `background` attribute, we can set any image as the background of the whole table or, for some specific column/row/cell as well.
 
-The following example shows, how to add a specific colour as the table background :
+The following example shows, how to add an image as the table background :
 
 ```HTML
 <table width="30%" border="1" background="Image URL">
