@@ -6,22 +6,23 @@ Separate tags and syntax exists to add all these visible elements inside the `<b
 
 Some of the basic operations performed within the `<body>` tags are :
 
-1. Sentence formatting
-2. Text formatting
-3. Adding Lists
-4. Adding & formatting Images
-5. Adding & formatting Videos
-6. Adding & formatting Links (Relative/Absolute)
-7. Adding Anchor tags
-8. Adding & formatting Tables
+1.  Sentence formatting
+2.  Text formatting
+3.  Adding Lists
+4.  Adding & formatting Images
+5.  Adding & formatting Videos
+6.  Adding & formatting Links (Relative/Absolute)
+7.  Adding Anchor tags
+8.  Adding & formatting Tables
 
 ## Sentence Formatting
 
 Sentence formatting includes :
 
-- Adding Paragraphs (With `<p>` tags)
-- Adding Line breaks (With `<br>` tag)
-- Adding blank spaces (With `&nbsp;` tag)
+-   Adding Paragraphs (With `<p>` tags)
+-   Adding Line breaks (With `<br>` or, `<br/>` tag)
+-   Adding blank spaces (With `&nbsp;` tag)
+-   Adding horizontal line (With `<hr>` or, `<hr/>` tag)
 
 ### The `<p>` Tags
 
@@ -39,9 +40,9 @@ _For example :_
 </p>
 ```
 
-### The `<br>` Tag
+### The `<br>` or, `<br/>` Tag
 
-The `<br>` tag don't have a closing tag and it simply breaks the line to start the next sentence on the next line.
+The `<br>`/`<br/>` tag don't have a closing tag and it simply breaks the line to start the next sentence on the next line.
 
 Unlike the `<p>` tags, it don't creates a large spacing but, just creates a new line for the sentence.
 
@@ -49,7 +50,7 @@ _For example :_
 
 ```HTML
 It was another day in the city and the hunter is still clueless.<br>
-The door bell rang and someone outside started speaking in a gentle voice.<br>
+The door bell rang and someone outside started speaking in a gentle voice.<br/>
 The hunter was afraid and asked "Who are you ?"
 ```
 
@@ -65,6 +66,20 @@ Therefore, to add empty spaces between sentences, we can use the keyword `&nbsp;
 
 If we want to have blank spaces equivalent of pressing the _Tab key_ once then, we have to write `&nbsp;` for four times.
 
+### The `<hr>` or, `<hr/>` Tag
+
+The `<hr>`/`<hr/>` simply adds a horizontal line in the webpage :
+
+```html
+Steve was born in Tokyo, Japan in 1950. He moved to London with his
+parents when he was 5 years old.
+<hr>
+Steve started school there and his father
+began work at the hospital. His mother was a house wife and he had four
+brothers.
+<hr/>
+```
+
 _For Example :_
 
 ```HTML
@@ -76,12 +91,14 @@ This marks the end of hunter's life. Hunter died as he can't cooperate with the 
 
 The text formatting includes :
 
-- Adding Headlines (With `<h1>,<h2>,..,<h6>` tags)
-- Making the fonts bold (With `<strong>` tags)
-- Making the fonts italic (With `<em>` tags)
-- Making the fonts underlined (With `<u>` tags)
-- Making the fonts strike-through (With `<strike>` tags)
-- Adding in-line text formatting (With `<font>` tags)
+-   Adding Headlines (With `<h1>,<h2>,..,<h6>` tags)
+-   Making the fonts bold (With `<strong>` or, `<b>` tags)
+-   Making the fonts italic (With `<em>` or, `<i>` tags)
+-   Making the fonts underlined (With `<u>` or, `<ins>` tags)
+-   Making the fonts strike-through (With `<strike>` or, `<del>` tags)
+-   Making the fonts big & small (With `<big>` and `<small>` tags)
+-   Adding subscripts & superscripts (With `<sub>` and `<sup>`)
+-   Adding in-line text formatting (With `<font>` tags)
 
 ### Header Tags
 
@@ -101,7 +118,6 @@ The six different header tags are as follows (in descending order of header size
 _For Example :_
 
 ```HTML
-
 <h1> Header 1 </h1>
 <h2> Header 1 </h2>
 <h3> Header 1 </h3>
@@ -110,9 +126,9 @@ _For Example :_
 <h6> Header 1 </h6>
 ```
 
-### The `<strong>` Tags
+### The `<strong>` or, `<b>` Tags
 
-To make a text bold, we need to enclose that within the `<strong>` tags as follows :
+To make a text bold, we need to enclose that within the `<strong>` or, `<b>` tags as follows :
 
 _For Example :_
 
@@ -120,9 +136,15 @@ _For Example :_
 The key character of the story is <strong> hunter </strong>.
 ```
 
-### The `<em>` Tags
+or,
 
-To make a text italics, we need to enclose that within the `<em>` tags as follows :
+```HTML
+The key character of the story is <b> hunter </b>.
+```
+
+### The `<em>` or, `<i>` Tags
+
+To make a text italics, we need to enclose that within the `<em>` or, `<i>` tags as follows :
 
 _For Example :_
 
@@ -130,9 +152,15 @@ _For Example :_
 Let's make this word <em> italics </em>.
 ```
 
-### The `<u>` Tags
+or,
 
-To underline a text, we need to enclose it within the `<u>` tags as follows :
+```HTML
+Let's make this word <i> italics </i>.
+```
+
+### The `<u>` or, `<ins>` Tags
+
+To underline a text, we need to enclose it within the `<u>` or, `<ins>` tags as follows :
 
 _For Example :_
 
@@ -140,9 +168,15 @@ _For Example :_
 This is something very <u> important </u>
 ```
 
-### The `<strike>` Tags
+or,
 
-To strikethrough a text, we need to enclose it within the `<strike>` tags as follows :
+```HTML
+This is something very <ins> important </ins>
+```
+
+### The `<strike>` or, `<del>` Tags
+
+To strikethrough a text, we need to enclose it within the `<strike>` or, `<del>` tags as follows :
 
 _For Example :_
 
@@ -150,13 +184,46 @@ _For Example :_
 This task is completed so need to <strike> strikethrough </strike> this.
 ```
 
+or,
+
+```HTML
+This task is completed so need to <del> strikethrough </del> this.
+```
+
 To Make a word bold, underlined and italics at the same time, we can enclose it within the respective three tags irrespective of any order but, the respective closing tags must follow the order of the opening tags.
 
 _For Example :_
 
 ```HTML
-
 Let's make this <em><strong><u> bold, italics & underlined  </em></strong></u>
+```
+
+### The `<big>` and `<small>` tags
+
+To make the font bigger relative to other texts, we can use the `<big>` tags :
+
+```html
+This font is <big>BIG</big>
+```
+
+Similarly, `<small>` tags are used to make the test smaller relative to other texts :
+
+```html
+This font is <small>small</small>
+```
+
+### The `<sub>` and `<sup>` tags
+
+`<sub>` tags can be used to add subscripts within the texts :
+
+```html
+This chemical formula for water is H<sub>2</sub>O
+```
+
+Similarly, `<sup>` tags can be used to add superscripts within the texts :
+
+```html
+This Coca-Cola trademark is written as CC<sup>TM</TM>
 ```
 
 ### Inline Text Formatting with `<font>` tags
@@ -167,9 +234,9 @@ _For Example :_
 
 with the following HTML syntax, we have made :
 
-- Font type : Arial
-- Font size : 24
-- Font colour : Blue
+-   Font type : Arial
+-   Font size : 24
+-   Font colour : Blue
 
 ```HTML
 <font face = "arial"  size = "22" color = "blue"> This is the text </font>
@@ -179,8 +246,8 @@ with the following HTML syntax, we have made :
 
 List can be of two types, such as :
 
-1. Unordered List
-2. Ordered List
+1.  Unordered List
+2.  Ordered List
 
 ### Unordered List
 
@@ -237,6 +304,12 @@ The `src` tag takes up the image address for rendering. Similarly, we can contro
 
 > If we don't provide the `height` tag then, the image will be auto-adjusted according to the width.
 
+Similarly, we can add borders around the image with `border` attribute, as follows :
+
+```html
+<img src= "Relative/Absolute image address" width="500" height="500"border = "1">
+```
+
 ## Embedding Videos
 
 The `<video>` tags is used to embed any video on the web page.
@@ -268,8 +341,8 @@ The `<a>` tags are used to add links in the web page.
 
 Links can be of two types :
 
-- Textual Links
-- Image Links
+-   Textual Links
+-   Image Links
 
 ### Textual Links :
 
@@ -354,20 +427,20 @@ We can add a table in the web page by following the syntactical approach given i
 </table>
 ```
 
-- `<tr>` tags add a row to the table
-- `<td>` tags add column to the table
+-   `<tr>` tags add a row to the table
+-   `<td>` tags add column to the table
 
 The opening `<table>` tag also takes several attributes to format the table as well and they are as follows :
 
-- `width = 50%` : Table covers 50% of browser width, to have a fixed table width irrespective of any browser width, we can specify the pixels instead of percentages. For example : `width = "500"`
+-   `width = 50%` : Table covers 50% of browser width, to have a fixed table width irrespective of any browser width, we can specify the pixels instead of percentages. For example : `width = "500"`
 
-- `border="1"` : Sets the border thickness, to have a table without any borders, we can set `border = "0"`.
+-   `border="1"` : Sets the border thickness, to have a table without any borders, we can set `border = "0"`.
 
-- `bordercolor="blue"` : Sets the color of the table border to "Blue".
+-   `bordercolor="blue"` : Sets the color of the table border to "Blue".
 
-- `cellspacing="2"` : Sets the space between two consecutive cells to "2" pixels
+-   `cellspacing="2"` : Sets the space between two consecutive cells to "2" pixels
 
-- `cellpadding = "2"` : Pads the number 2 pixels away from each side of its cell.
+-   `cellpadding = "2"` : Pads the number 2 pixels away from each side of its cell.
 
 The below image illustrates the cell-spacing and cell-padding in a table :
 
@@ -485,9 +558,9 @@ In the following example, `nowrap` is applied to the column header :
 
 The cell contents can be aligned to left, right, centre or, justify by using the following attributes :
 
-- `align = "right"`- For right alignment
-- `align = "left"` - For left alignment
-- `align = "center"` - For centre alignment
+-   `align = "right"`- For right alignment
+-   `align = "left"` - For left alignment
+-   `align = "center"` - For centre alignment
 
 In the following example, the column headers and "Expenses" column ins centre aligned whereas, the "Month" column is left aligned :
 
@@ -539,10 +612,10 @@ The following example shows, how to add an image as the table background :
 </table>
 ```
 
-similarly, we can apply the background image just to the column headers as follows :
+similarly, we can set a color as the table background with the help of `bgcolor` attribute  as follows :
 
 ```HTML
-<table width="30%" border="1">
+<table width="30%" border="1" bgcolor="red">
   <tr background="Image URL">
     <td align="center"> Month </td>
     <td align="center"> Expenses </td>
