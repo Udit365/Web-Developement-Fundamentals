@@ -118,6 +118,12 @@ Elements/Tags includes are :
 
 The following image shows, how the various content models overlap in certain areas, depending on their use cases :
 
+<img src= "..\Images\Content_Model.jpg" width="500" >
+
 ## The HTML5 Page Structure
 
 A basic HTML5 page structure is more or, less looks like this one :
+
+<img src= "..\Images\HTML5_Page_Structure.jpg" width="500" >
+
+Although, one may not use all the elements shown in the image depending upon the web page requirements.
